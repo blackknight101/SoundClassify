@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject private var viewModel = HomeViewModel()
+    @StateObject private var viewModel: HomeViewModel
+    
+    init() {
+        _viewModel = .init(wrappedValue: .init(audioAnalyzer: AudioAnalyzer()))
+    }
     
     var body: some View {
         NavigationStack {

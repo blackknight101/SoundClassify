@@ -17,10 +17,11 @@ final class HomeViewModel: ObservableObject {
     @Published var sounds: [SoundClassify] = []
     @Published var state: State = .none
     
-    private lazy var audioAnalyzer = AudioAnalyzer()
+    private let audioAnalyzer: AudioAnalyzer
     private var analysisTask: Task<Void, Never>?
     
-    init() {
+    init(audioAnalyzer: AudioAnalyzer) {
+        self.audioAnalyzer = audioAnalyzer
         Task { [weak self] in
             let isGranted = await self?.initPermission()
             guard let isGranted else { return }
