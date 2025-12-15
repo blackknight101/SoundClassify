@@ -13,7 +13,7 @@ struct SoundClassifyView: View, Equatable {
     var body: some View {
         HStack {
             Image(systemName: "waveform")
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: .space4) {
                 Text(sound.name)
                     .font(.headline)
                     .foregroundStyle(.textPrimary)
