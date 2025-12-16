@@ -46,7 +46,6 @@ struct HomeView: View {
     private var listView: some View {
         List(viewModel.sounds, id: \.id) { sound in
             SoundClassifyView(sound: sound)
-                .id(sound.id)
                 .transition(.move(edge: .top).combined(with: .opacity))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
