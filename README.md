@@ -111,7 +111,6 @@ It listens from the microphone, classifies incoming audio, and shows a list of d
 - Add charts or visualizations for confidence over time.
 
 ### License
-
-Specify your project’s license here (e.g., MIT, Apache 2.0, proprietary).
+MIT.
 
 
